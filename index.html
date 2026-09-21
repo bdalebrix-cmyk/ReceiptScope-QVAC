@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReceiptScope — Private Receipt Scanner</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <div class="mark">R</div>
+        <div>
+          <h1>ReceiptScope</h1>
+          <p>Private receipt scanning, powered by on-device AI.</p>
+        </div>
+      </div>
+      <div class="privacy"><span></span> Runs locally</div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">QVAC · OFFLINE OCR</div>
+        <h2>Turn a receipt photo into searchable text.</h2>
+        <p class="lead">
+          Pick a receipt image. QVAC loads an OCR model on this computer and
+          extracts the text without sending the image to a server.
+        </p>
+        <button id="pick">Scan a receipt</button>
+        <div id="status" class="status">Ready. Your image stays on this device.</div>
+      </div>
+
+      <div class="receipt-card">
+        <div class="paper">
+          <div class="fake-line wide"></div>
+          <div class="fake-line"></div>
+          <div class="fake-line short"></div>
+          <hr>
+          <div class="fake-row"><span>COFFEE</span><b>$4.50</b></div>
+          <div class="fake-row"><span>SANDWICH</span><b>$7.25</b></div>
+          <div class="fake-row"><span>WATER</span><b>$1.50</b></div>
+          <hr>
+          <div class="fake-row total"><span>TOTAL</span><b>$13.25</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="result-panel">
+      <div class="panel-head">
+        <div>
+          <div class="eyebrow">LOCAL RESULT</div>
+          <h3>Extracted text</h3>
+        </div>
+        <button id="copy" class="secondary" disabled>Copy text</button>
+      </div>
+      <div id="empty" class="empty">
+        <div class="empty-icon">⌁</div>
+        <p>Your OCR result will appear here.</p>
+      </div>
+      <pre id="output" class="output" hidden></pre>
+    </section>
+
+    <footer>
+      <span>ReceiptScope</span>
+      <span>QVAC 0.19.1 · OCR_LATIN · loadModel() + ocr()</span>
+    </footer>
+  </main>
+  <script src="./renderer.js"></script>
+</body>
+</html>

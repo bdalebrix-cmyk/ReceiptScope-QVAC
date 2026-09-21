@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Private, on-device receipt scanner powered by Tether QVAC.",
   "type": "module",
-  "main": "src/main.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
     "dev": "electron ."
@@ -12,7 +12,10 @@
     "@qvac/sdk": "0.19.1"
   },
   "devDependencies": {
-    "electron": "37.2.6"
+    "electron": "^37.2.6"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "allowScripts": {
+    "electron@37.2.6": true
+  }
 }
